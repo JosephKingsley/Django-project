@@ -1,0 +1,17 @@
+from unicodedata import name
+from django.db import models
+
+# Create your models here.
+class Schools(models.Model):
+    name = models.CharField(max_length=50)
+    Address = models.CharField(max_length=23)
+
+    def __str__(self) -> str:
+        return self.name
+
+class Country(models.Model):
+    name = models.CharField(max_length=23)
+
+    def __str__(self) -> str:
+        return self.name
+
